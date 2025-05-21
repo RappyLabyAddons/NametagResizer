@@ -3,6 +3,12 @@
     "settings": {
       "enabled": {
         "name": "Enabled"
+      },
+      "nametagSize": {
+        "name": "Nametag Size"
+      },
+      "playersOnly": {
+        "name": "Only resize player nametags"
       }
     }
   }
