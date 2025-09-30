@@ -18,7 +18,8 @@ public class NametagSizeListener {
     if(this.config.playersOnly().get() && !event.isPlayer()) {
       return;
     }
-    float scaleFactor = 0.5F + ((this.config.nametagSize().get() - 1) / 9.0F) * 1.5F;
+    float scaleFactor =
+        0.5F + ((this.config.nametagSizeConfig().nametagSize().get() - 1) / 9.0F) * 1.5F;
     event.setX(event.getX() * scaleFactor);
     event.setY(event.getY() * scaleFactor);
     event.setZ(event.getZ() * scaleFactor);

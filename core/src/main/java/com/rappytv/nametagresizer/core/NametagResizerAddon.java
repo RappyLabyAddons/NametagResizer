@@ -1,5 +1,6 @@
 package com.rappytv.nametagresizer.core;
 
+import com.rappytv.nametagresizer.core.listener.KeyListener;
 import com.rappytv.nametagresizer.core.listener.NametagSizeListener;
 import net.labymod.api.addon.LabyAddon;
 import net.labymod.api.models.addon.annotation.AddonMain;
@@ -11,6 +12,7 @@ public class NametagResizerAddon extends LabyAddon<NametagResizerConfig> {
   protected void enable() {
     this.registerSettingCategory();
 
+    this.registerListener(new KeyListener(this));
     this.registerListener(new NametagSizeListener(this));
   }
 
