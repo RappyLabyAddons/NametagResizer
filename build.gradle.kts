@@ -16,7 +16,7 @@ labyMod {
         displayName = "Nametag Resizer"
         author = "RappyTV"
         description = "Easily edit the render size of nametags"
-        minecraftVersion = "1.8.9<1.21.5"
+        minecraftVersion = "1.8.9<1.21.8"
         version = rootProject.version.toString()
     }
 
