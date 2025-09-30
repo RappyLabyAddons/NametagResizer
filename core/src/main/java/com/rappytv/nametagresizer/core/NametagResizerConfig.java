@@ -6,6 +6,7 @@ import net.labymod.api.client.gui.screen.widget.widgets.input.KeybindWidget.KeyB
 import net.labymod.api.client.gui.screen.widget.widgets.input.SliderWidget.SliderSetting;
 import net.labymod.api.client.gui.screen.widget.widgets.input.SwitchWidget.SwitchSetting;
 import net.labymod.api.configuration.loader.Config;
+import net.labymod.api.configuration.loader.annotation.IntroducedIn;
 import net.labymod.api.configuration.loader.annotation.ShowSettingInParent;
 import net.labymod.api.configuration.loader.annotation.SpriteSlot;
 import net.labymod.api.configuration.loader.annotation.SpriteTexture;
@@ -26,6 +27,7 @@ public class NametagResizerConfig extends AddonConfig {
   @SwitchSetting
   private final ConfigProperty<Boolean> playersOnly = new ConfigProperty<>(true);
 
+  @IntroducedIn(namespace = "nametagresizer", value = "1.0.1")
   @SpriteSlot(x = 2)
   private final NametagSizeConfig nametagSizeConfig = new NametagSizeConfig();
 
@@ -49,10 +51,12 @@ public class NametagResizerConfig extends AddonConfig {
     private final ConfigProperty<Integer> nametagSize = new ConfigProperty<>(4);
 
     @SettingSection(value = "hotkeys", center = true)
+    @IntroducedIn(namespace = "nametagresizer", value = "1.0.1")
     @SpriteSlot(x = 3)
     @KeyBindSetting
     private final ConfigProperty<Key> increaseSizeKey = new ConfigProperty<>(Key.PAGE_UP);
 
+    @IntroducedIn(namespace = "nametagresizer", value = "1.0.1")
     @SpriteSlot(x = 4)
     @KeyBindSetting
     private final ConfigProperty<Key> decreaseSizeKey = new ConfigProperty<>(Key.PAGE_DOWN);
