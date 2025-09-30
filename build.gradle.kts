@@ -6,7 +6,7 @@ plugins {
 val versions = providers.gradleProperty("net.labymod.minecraft-versions").get().split(";")
 
 group = "org.example"
-version = providers.environmentVariable("VERSION").getOrElse("1.0.0")
+version = providers.environmentVariable("VERSION").getOrElse("1.0.1")
 
 labyMod {
     defaultPackageName = "com.rappytv.nametagresizer"
@@ -16,7 +16,7 @@ labyMod {
         displayName = "Nametag Resizer"
         author = "RappyTV"
         description = "Easily edit the render size of nametags"
-        minecraftVersion = "1.8.9<1.21.5"
+        minecraftVersion = "1.8.9<1.21.8"
         version = rootProject.version.toString()
     }
 

@@ -4,11 +4,25 @@
       "enabled": {
         "name": "Enabled"
       },
-      "nametagSize": {
-        "name": "Nametag Size"
-      },
       "playersOnly": {
         "name": "Only resize player nametags"
+      },
+      "nametagSizeConfig": {
+        "header": {
+          "hotkeys": {
+            "name": "Hotkeys"
+          }
+        },
+        "name": "Nametag Size",
+        "description": "Changes the nametag render size.\nDefault: §b4",
+        "increaseSizeKey": {
+          "name": "Increase Size",
+          "description": "Increases the nametag render size by 1."
+        },
+        "decreaseSizeKey": {
+          "name": "Decrease Size",
+          "description": "Decreases the nametag render size by 1."
+        }
       }
     }
   }

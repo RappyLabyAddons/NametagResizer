@@ -1,4 +1,4 @@
-package com.rappytv.nametagresizer.event;
+package com.rappytv.nametagresizer.api.event;
 
 import net.labymod.api.event.Event;
 

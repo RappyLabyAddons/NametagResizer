@@ -1,4 +1,4 @@
-package com.rappytv.nametagresizer.v1_20_1.mixins;
+package com.rappytv.nametagresizer.v1_21_8.mixins;
 
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
@@ -7,9 +7,9 @@ import com.rappytv.nametagresizer.api.event.NametagSizeEvent;
 import net.labymod.api.Laby;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.entity.EntityRenderer;
+import net.minecraft.client.renderer.entity.state.EntityRenderState;
+import net.minecraft.client.renderer.entity.state.PlayerRenderState;
 import net.minecraft.network.chat.Component;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.entity.player.Player;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
@@ -17,15 +17,15 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(EntityRenderer.class)
-public class MixinEntityRenderer<T extends Entity> {
+public class MixinEntityRenderer<S extends EntityRenderState> {
 
   @Unique
   private boolean sandbox$isPlayer;
 
   @Inject(method = "renderNameTag", at = @At("HEAD"))
-  public void renderNameTag(T entity, Component component, PoseStack stack,
-      MultiBufferSource buffer, int light, CallbackInfo ci) {
-    this.sandbox$isPlayer = entity instanceof Player;
+  public void renderNameTag(S state, Component component, PoseStack stack,
+      MultiBufferSource bufferSource, int $$4, CallbackInfo ci) {
+    this.sandbox$isPlayer = state instanceof PlayerRenderState;
   }
 
   @WrapOperation(method = "renderNameTag", at = @At(value = "INVOKE", target = "Lcom/mojang/blaze3d/vertex/PoseStack;scale(FFF)V"))
