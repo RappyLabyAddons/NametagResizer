@@ -1,5 +1,7 @@
 package com.rappytv.nametagresizer.v1_12_2.mixins;
 
+import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
+import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
 import com.rappytv.nametagresizer.api.event.NametagSizeEvent;
 import net.labymod.api.Laby;
 import net.minecraft.client.renderer.GlStateManager;
@@ -10,7 +12,6 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
-import org.spongepowered.asm.mixin.injection.Redirect;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(value = Render.class, priority = 1001)
@@ -26,11 +27,11 @@ public class MixinRender<T extends Entity> {
   }
 
   @SuppressWarnings("all")
-  @Redirect(
+  @WrapOperation(
       method = "renderLivingLabel",
       at = @At(value = "INVOKE", target = "Lnet/minecraft/client/renderer/GlStateManager;scale(FFF)V")
   )
-  private void scale(float x, float y, float z) {
+  private void modifyScale(float x, float y, float z, Operation<Void> original) {
     NametagSizeEvent event = new NametagSizeEvent(this.nametagresizer$isPlayer, x, y, z);
     Laby.fireEvent(event);
     GlStateManager.scale(event.getX(), event.getY(), event.getZ());
