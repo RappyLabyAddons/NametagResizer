@@ -1,6 +1,6 @@
-package com.rappytv.nametagresizer;
+package com.rappytv.nametagresizer.core;
 
-import com.rappytv.nametagresizer.listener.NametagSizeListener;
+import com.rappytv.nametagresizer.core.listener.NametagSizeListener;
 import net.labymod.api.addon.LabyAddon;
 import net.labymod.api.models.addon.annotation.AddonMain;
 

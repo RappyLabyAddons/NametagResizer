@@ -1,6 +1,6 @@
 package com.rappytv.nametagresizer.v1_8_9.mixins;
 
-import com.rappytv.nametagresizer.event.NametagSizeEvent;
+import com.rappytv.nametagresizer.api.event.NametagSizeEvent;
 import net.labymod.api.Laby;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.entity.Render;

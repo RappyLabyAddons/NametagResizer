@@ -1,7 +1,7 @@
 package com.rappytv.nametagresizer.v1_20_4.mixins;
 
 import com.mojang.blaze3d.vertex.PoseStack;
-import com.rappytv.nametagresizer.event.NametagSizeEvent;
+import com.rappytv.nametagresizer.api.event.NametagSizeEvent;
 import net.labymod.api.Laby;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.entity.EntityRenderer;

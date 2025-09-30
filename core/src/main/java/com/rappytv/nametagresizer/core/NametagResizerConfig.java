@@ -1,4 +1,4 @@
-package com.rappytv.nametagresizer;
+package com.rappytv.nametagresizer.core;
 
 import net.labymod.api.addon.AddonConfig;
 import net.labymod.api.client.gui.screen.widget.widgets.input.SliderWidget.SliderSetting;

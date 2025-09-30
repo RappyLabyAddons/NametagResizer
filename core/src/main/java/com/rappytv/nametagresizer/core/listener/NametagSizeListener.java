@@ -1,8 +1,8 @@
-package com.rappytv.nametagresizer.listener;
+package com.rappytv.nametagresizer.core.listener;
 
-import com.rappytv.nametagresizer.NametagResizerAddon;
-import com.rappytv.nametagresizer.NametagResizerConfig;
-import com.rappytv.nametagresizer.event.NametagSizeEvent;
+import com.rappytv.nametagresizer.api.event.NametagSizeEvent;
+import com.rappytv.nametagresizer.core.NametagResizerAddon;
+import com.rappytv.nametagresizer.core.NametagResizerConfig;
 import net.labymod.api.event.Subscribe;
 
 public class NametagSizeListener {
