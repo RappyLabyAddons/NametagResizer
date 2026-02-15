@@ -15,7 +15,7 @@ public class NametagResizerAddon extends LabyAddon<NametagResizerConfig> {
   protected void preConfigurationLoad() {
     Laby.references().revisionRegistry().register(new SimpleRevision(
         "nametagresizer",
-        new SemanticVersion("1.0.1"),
+        new SemanticVersion(1, 0, 1),
         "2025-09-30"
     ));
   }
