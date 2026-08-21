@@ -4,6 +4,7 @@ import com.rappytv.nametagresizer.core.listener.KeyListener;
 import com.rappytv.nametagresizer.core.listener.NametagSizeListener;
 import net.labymod.api.Laby;
 import net.labymod.api.addon.LabyAddon;
+import net.labymod.api.feature.BuiltinCategories;
 import net.labymod.api.models.addon.annotation.AddonMain;
 import net.labymod.api.revision.SimpleRevision;
 import net.labymod.api.util.version.SemanticVersion;
@@ -23,6 +24,7 @@ public class NametagResizerAddon extends LabyAddon<NametagResizerConfig> {
   @Override
   protected void enable() {
     this.registerSettingCategory();
+    this.placeInModsCategory(BuiltinCategories.GAME);
 
     this.registerListener(new KeyListener(this));
     this.registerListener(new NametagSizeListener(this));

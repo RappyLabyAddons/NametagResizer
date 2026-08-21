@@ -50,7 +50,7 @@ public class NametagResizerConfig extends AddonConfig {
     @SliderSetting(min = SIZE_MIN, max = SIZE_MAX)
     private final ConfigProperty<Integer> nametagSize = new ConfigProperty<>(4);
 
-    @SettingSection(value = "hotkeys", center = true)
+    @SettingSection("hotkeys")
     @IntroducedIn(namespace = "nametagresizer", value = "1.0.1")
     @SpriteSlot(x = 3)
     @KeyBindSetting
