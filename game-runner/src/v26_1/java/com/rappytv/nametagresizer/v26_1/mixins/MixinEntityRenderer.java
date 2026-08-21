@@ -1,7 +1,7 @@
 package com.rappytv.nametagresizer.v26_1.mixins;
 
 import com.mojang.blaze3d.vertex.PoseStack;
-import com.rappytv.nametagresizer.v26_1.RenderStateAccessor;
+import com.rappytv.nametagresizer.api.misc.RenderStateAccessor;
 import net.minecraft.client.renderer.SubmitNodeCollector;
 import net.minecraft.client.renderer.entity.EntityRenderer;
 import net.minecraft.client.renderer.entity.state.EntityRenderState;

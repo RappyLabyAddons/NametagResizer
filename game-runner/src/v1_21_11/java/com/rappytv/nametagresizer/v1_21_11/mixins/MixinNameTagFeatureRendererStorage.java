@@ -4,7 +4,7 @@ import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.rappytv.nametagresizer.api.event.NametagSizeEvent;
-import com.rappytv.nametagresizer.v1_21_11.RenderStateAccessor;
+import com.rappytv.nametagresizer.api.misc.RenderStateAccessor;
 import net.labymod.api.Laby;
 import net.minecraft.client.renderer.feature.NameTagFeatureRenderer;
 import org.spongepowered.asm.mixin.Mixin;

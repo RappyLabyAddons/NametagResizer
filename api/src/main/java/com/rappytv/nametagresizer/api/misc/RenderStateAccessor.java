@@ -1,4 +1,4 @@
-package com.rappytv.nametagresizer.v26_2;
+package com.rappytv.nametagresizer.api.misc;
 
 public class RenderStateAccessor {
 
